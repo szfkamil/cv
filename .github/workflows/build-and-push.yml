@@ -1,0 +1,52 @@
+name: Build CV and push PDF to website
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout CV repo
+        uses: actions/checkout@v4
+
+      - name: Install Typst
+        run: |
+          curl -sL https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz -o /tmp/typst.tar.xz
+          tar -xJf /tmp/typst.tar.xz -C /tmp
+          sudo mv /tmp/typst-x86_64-unknown-linux-musl/typst /usr/local/bin/typst
+
+      - name: Compile CV
+        run: typst compile cv.typ cv.pdf
+
+      - name: Commit built PDF to CV repo
+        run: |
+          git config user.name "cv-pipeline"
+          git config user.email "main@kamilzwoinski.com"
+          git add cv.pdf
+          git diff --cached --quiet || git commit -m "Build cv.pdf from cv.typ"
+          git push origin main
+
+      - name: Push PDF to website repo
+        env:
+          DEPLOY_KEY: ${{ secrets.CV_DEPLOY_KEY }}
+        run: |
+          eval "$(ssh-agent -s)"
+          echo "$DEPLOY_KEY" | ssh-add -
+          ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null
+          git clone git@github.com:szfkamil/szfkamil.github.io.git /tmp/website
+          cd /tmp/website
+          git config user.name "cv-pipeline"
+          git config user.email "main@kamilzwoinski.com"
+          cp /home/runner/work/cv/cv/cv.pdf assets/cv.pdf
+          git add assets/cv.pdf
+          git diff --cached --quiet && echo "PDF unchanged — no push needed" || {
+            git commit -m "Update cv.pdf from cv repo"
+            git push origin main
+          }
+        shell: bash
