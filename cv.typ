@@ -39,12 +39,9 @@
 
 // ---------- header ----------
 // Prompt line mirrors the site's prompt: guest green, @ and :~$ gray,
-// hostname blue.
+// hostname blue, command white.
 #text(font: mono, size: 9.5pt)[
-  #text(fill: green)[guest]
-  #text(fill: muted)[\@]
-  #text(fill: accent)[kamilzwoinski.com]
-  #text(fill: muted)[:\~#sym.dollar]
+  #text(fill: green)[guest]#text(fill: muted)[@]#text(fill: accent)[kamilzwoinski.com]#text(fill: muted)[:\~\$]#text(fill: ink)[ whoami]
 ]
 #v(0.9em, weak: true)
 
@@ -58,18 +55,18 @@
   ],
   [
     #align(right)[
-      #set par(leading: 0.18em)
-      #text(size: 9.5pt, fill: muted)[Gdańsk, Poland]
+      #set text(font: mono, size: 9.5pt)
+      #set par(leading: 0.12em)
       #grid(
         columns: (auto, auto),
         column-gutter: 0.5em,
-        row-gutter: 0.06em,
+        row-gutter: 0.405em,
         align: (right, left),
-        text(font: mono, size: 9pt, fill: accent)[github],
+        text(fill: accent)[github],
         text(fill: green)[#link("https://github.com/szfkamil")[github.com/szfkamil]],
-        text(font: mono, size: 9pt, fill: accent)[linkedin],
+        text(fill: accent)[linkedin],
         text(fill: green)[#link("https://www.linkedin.com/in/kamil-zwoiński-9a5461229")[linkedin.com/in/kamil-zwoiński]],
-        text(font: mono, size: 9pt, fill: accent)[email],
+        text(fill: accent)[email],
         text(fill: green)[#link("mailto:professional@kamilzwoinski.com")[professional\@kamilzwoinski.com]],
       )
     ]
