@@ -2,7 +2,7 @@
 
 Source of Kamil Zwoiński's one-page CV, written in [Typst](https://typst.app/), with automation that publishes the built PDF.
 
-Live PDF: <https://szfkamil.github.io/assets/cv.pdf>
+Live PDF: <https://kamilzwoinski.com/assets/cv.pdf>
 
 ## Build
 
@@ -17,4 +17,4 @@ typst compile cv.typ cv.pdf
 1. installs Typst,
 2. compiles `cv.pdf` from `cv.typ`,
 3. commits the rebuilt PDF back to this repo,
-4. pushes it to the website repo (`szfkamil/szfkamil.github.io`) as `assets/cv.pdf`.
+4. pushes it to the website repo (`szfkamil/szfkamil.github.io`) as `assets/cv.pdf`, whose own workflow then deploys it to Cloudflare Pages.
