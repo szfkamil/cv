@@ -78,10 +78,9 @@
 // ---------- summary ----------
 #section("SUMMARY")
 #text(size: 10.5pt)[
-  Computer science student with a perfect academic record and strong Java fundamentals. Comfortable
-  working in Linux, Git, and shell as a default development environment; building projects in PostgreSQL,
-  Python, and embedded C; currently deepening data structures and algorithms while looking for a
-  software engineering internship.
+  Computer science student with a 4.94 GPA and solid Java fundamentals. Comfortable working in Linux,
+  Git, and shell as a default development environment; building projects in C, Java, and Assembly while
+  looking for a software engineering internship.
 ]
 
 // ---------- education ----------
@@ -89,9 +88,8 @@
 #entry("University of Gdańsk — Computer Science, BSc (licencjat)", "Oct 2025 – expected 2028")
 #text(size: 10.5pt)[
   Faculty of Mathematics, Physics and Informatics \
-  #bullet 5.0 GPA — highest grade in every completed course (grading scale 2–5) \
-  #bullet Completed: Discrete Mathematics I–II, Databases, Programming Languages (Python), Mathematical Analysis, Linear Algebra, Web Technologies \
-  #bullet In progress: Object-Oriented Programming (Java), Algorithms and Data Structures I, Operating Systems
+  #bullet 4.94 GPA — highest grade in every completed course (grading scale 2–5) \
+  #bullet Completed: Intro to Programming, Discrete Mathematics I–II, Databases, Programming Languages (Python), Mathematical Analysis, Linear Algebra, Web Technologies, Programmer's Workshop
 ]
 
 // ---------- projects (most recent first) ----------
@@ -144,8 +142,8 @@
   columns: 2,
   column-gutter: 1.8em,
   row-gutter: 0.45em,
-  skill("Programming:", "Java (OOP), Python, C (QMK firmware), C++, JavaScript (vanilla), SQL/PostgreSQL, HTML/SCSS"),
-  skill("Tools & workflow:", "Linux (daily power user), git, vim, zsh"),
+  skill("Programming:", "Java (OOP), Python, C (QMK firmware), C++, JavaScript (vanilla), SQL/PostgreSQL, HTML/SCSS, Bash and Zsh scripting"),
+  skill("Tools & workflow:", "Linux (daily power user), git, shell, Doom Emacs (Evil)"),
   skill("Hardware:", "KiCad, electronics, soldering, hardware debugging"),
   skill("Currently learning:", "Assembly, data structures & algorithms"),
 )
