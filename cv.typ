@@ -50,7 +50,7 @@
   column-gutter: 2em,
   [
     #text(font: mono, size: 24pt, weight: "bold", fill: ink, "KAMIL ZWOIŃSKI")
-    #v(0.1em, weak: true)
+    #v(0.6em, weak: true)
     #text(size: 11.5pt, fill: muted, "Computer Science student — University of Gdańsk")
   ],
   [
@@ -107,6 +107,7 @@
   #bullet Modeled on professional standards (FRBR, MARC21); enforces per-user-type loan policies \
   #bullet Tech: PostgreSQL, SQL, database design, ER modeling
 ]
+#v(0.45em)
 
 #entry([*#text(fill: green)[programming-languages]* _— Python coursework_], "2025–present")
 #text(size: 10.5pt)[
@@ -115,6 +116,7 @@
   #bullet Invoice/shop system — full test-double suite (mock, stub, fake, spy, dummy), 15 unit tests \
   #bullet Tech: Python, OOP, unit testing
 ]
+#v(0.45em)
 
 #entry(
   [*#text(fill: green)[ergonomic keyboards]* _— QMK firmware & hardware_],
@@ -127,6 +129,7 @@
   #bullet Assemble and troubleshoot custom builds: PCB/electronics sourcing, hand soldering, hardware debugging in KiCad \
   #bullet Tech: C, QMK, KiCad, electronics
 ]
+#v(0.45em)
 
 #entry(
   [*#text(fill: green)[#link("https://github.com/szfkamil/szfkamil.github.io")[szfkamil.github.io]]* _— personal website_],
@@ -137,13 +140,14 @@
   #bullet Responsive landing page with a terminal-inspired visual identity \
   #bullet Tech: HTML, SCSS
 ]
+#v(0.45em)
 
 // ---------- skills ----------
 #section("TECHNICAL SKILLS")
 #grid(
   columns: 2,
   column-gutter: 1.8em,
-  row-gutter: 0.45em,
+  row-gutter: 1em,
   skill("Programming:", "Java (OOP), Python, C (QMK firmware), C++, JavaScript (vanilla), SQL/PostgreSQL, HTML/SCSS, Bash and Zsh scripting"),
   skill("Tools & workflow:", "Linux (daily power user), git, shell, Doom Emacs (Evil)"),
   skill("Hardware:", "KiCad, electronics, soldering, hardware debugging"),
