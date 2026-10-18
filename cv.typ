@@ -62,6 +62,8 @@
         column-gutter: 0.5em,
         row-gutter: 0.405em,
         align: (right, left),
+        text(fill: accent)[phone],
+        text(fill: green)[#link("tel:+48510629969")[+48 510 629 969]],
         text(fill: accent)[github],
         text(fill: green)[#link("https://github.com/szfkamil")[github.com/szfkamil]],
         text(fill: accent)[linkedin],
